@@ -14,10 +14,11 @@ class Teacher(models.Model):
    place_of_work = models.CharField(max_length=35)
    salary_earned= models.IntegerField()
    level_of_education= models.CharField(max_length=30)
+   address = models.CharField(max_length=30)
+    profile_picture = models.ImageField()
    
    def __str__(self):
        return f"{self.first_name} {self.last_name}"
-
 
 
 
