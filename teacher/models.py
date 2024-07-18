@@ -15,7 +15,7 @@ class Teacher(models.Model):
    salary_earned= models.IntegerField()
    level_of_education= models.CharField(max_length=30)
    address = models.CharField(max_length=30)
-    profile_picture = models.ImageField()
+   profile_picture = models.ImageField(upload_to='profile_pictures', null=True,blank=True)
    
    def __str__(self):
        return f"{self.first_name} {self.last_name}"
